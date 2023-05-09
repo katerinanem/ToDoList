@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".AddNoteActivity">
+
+
+    <EditText
+        android:id="@+id/editTextNote"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"
+        android:hint="Введите текст заметки:"
+        android:layout_height="wrap_content"
+        />
+
+    <RadioGroup
+        android:id="@+id/radioGroupPriority"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="24dp"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radioButtonGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked = "true"
+            android:background="@android:color/holo_green_light"
+            android:text="Низкий"
+            android:padding="8dp"
+            android:textColor="@android:color/white"
+
+            />
+
+        <RadioButton
+            android:id="@+id/radioButtonYellow"
+            android:layout_width="wrap_content"
+            android:text="Средний"
+            android:padding="8dp"
+            android:background="@android:color/holo_orange_light"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:id="@+id/radioButtonRed"
+            android:layout_width="wrap_content"
+            android:padding="8dp"
+            android:text="Высокий"
+            android:background="@android:color/holo_red_light"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"/>
+
+    </RadioGroup>
+    <Button
+        android:id="@+id/buttonSaveNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сохранить"
+        android:layout_margin="16dp"
+        android:textAlignment="center"
+        />
+
+
+</LinearLayout>
